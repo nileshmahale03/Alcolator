@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qs-Df-9MM">
-                                <rect key="frame" x="208" y="131" width="113" height="45"/>
+                                <rect key="frame" x="-4.5" y="131" width="538" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -50,6 +50,7 @@
                             <constraint firstItem="HqC-TY-MVS" firstAttribute="width" secondItem="sCF-ro-08I" secondAttribute="width" id="KFm-s6-moh"/>
                             <constraint firstItem="HqC-TY-MVS" firstAttribute="centerX" secondItem="9qs-Df-9MM" secondAttribute="centerX" constant="28" id="Rjk-gA-ZII"/>
                             <constraint firstItem="9qs-Df-9MM" firstAttribute="top" secondItem="HqC-TY-MVS" secondAttribute="bottom" constant="25" id="S5p-7c-yVg"/>
+                            <constraint firstItem="of1-u6-YQQ" firstAttribute="width" secondItem="9qs-Df-9MM" secondAttribute="width" id="gYb-b5-laU"/>
                             <constraint firstItem="sCF-ro-08I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="maz-fF-xuP"/>
                             <constraint firstItem="sCF-ro-08I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xWF-wt-fNA"/>
                             <constraint firstItem="of1-u6-YQQ" firstAttribute="top" secondItem="9qs-Df-9MM" secondAttribute="bottom" constant="32" id="xyt-sW-rcU"/>
