@@ -1,58 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rSa-gk-IfP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x5l-jt-nUp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Main Menu View Controller-->
-        <scene sceneID="aPM-nZ-dWH">
+        <!--Tab Bar Controller-->
+        <scene sceneID="H0h-fc-Iqw">
             <objects>
-                <viewController id="4Ih-IO-Bqi" customClass="MainMenuViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zz9-NG-iix"/>
-                        <viewControllerLayoutGuide type="bottom" id="yja-9e-AS9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zbH-Yn-jVH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz6-KF-yDd">
-                                <rect key="frame" x="247" y="104" width="105" height="73"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
-                                <state key="normal" title="Wine">
-                                    <color key="titleColor" red="0.44705882352941173" green="0.18431372549019609" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="yND-6a-Bfy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-aZ-sor">
-                                <rect key="frame" x="220" y="197" width="159" height="76"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
-                                <state key="normal" title="Whiskey">
-                                    <color key="titleColor" red="0.70196078431372544" green="0.40784313725490196" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hbh-0s-zjf" kind="show" id="5NT-gq-gHe"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="jz6-KF-yDd" secondAttribute="centerX" id="82p-fh-Ilc"/>
-                            <constraint firstItem="Sef-aZ-sor" firstAttribute="top" secondItem="jz6-KF-yDd" secondAttribute="bottom" constant="20" id="CEZ-vP-wNv"/>
-                            <constraint firstItem="jz6-KF-yDd" firstAttribute="top" secondItem="Zz9-NG-iix" secondAttribute="bottom" constant="40" id="T8G-UR-Yzd"/>
-                            <constraint firstItem="Sef-aZ-sor" firstAttribute="centerX" secondItem="jz6-KF-yDd" secondAttribute="centerX" constant="0.5" id="p8a-ld-aPh"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="aVv-x4-ssh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SrL-Mi-GPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController id="x5l-jt-nUp" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Svt-Ee-Qd8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="n0A-m9-U5u"/>
+                        <segue destination="hbh-0s-zjf" kind="relationship" relationship="viewControllers" id="TqC-BO-ipc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccX-Je-6MK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="255"/>
+            <point key="canvasLocation" x="-1047" y="-462"/>
         </scene>
-        <!--Wine View Controller-->
+        <!--Wine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WineViewController" sceneMemberID="viewController">
@@ -115,6 +87,7 @@
                             <outletCollection property="gestureRecognizers" destination="8Qn-8g-Teh" appends="YES" id="owa-CL-coY"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Wine" image="wine" id="zNq-xG-Hxe"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="HqC-TY-MVS" id="sSA-Ku-Oeg"/>
                         <outlet property="beerPercentTextField" destination="sCF-ro-08I" id="Ven-tG-Bnp"/>
@@ -128,9 +101,9 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1392" y="-88"/>
+            <point key="canvasLocation" x="-148" y="-844"/>
         </scene>
-        <!--Whiskey View Controller-->
+        <!--Whiskey-->
         <scene sceneID="Cso-Dt-m1D">
             <objects>
                 <viewController id="hbh-0s-zjf" customClass="WhiskeyViewController" sceneMemberID="viewController">
@@ -190,6 +163,7 @@
                             <constraint firstItem="WCq-Xd-JnI" firstAttribute="top" secondItem="YJK-VU-mB7" secondAttribute="bottom" constant="26" id="zeo-gD-ZrO"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Whiskey" image="whiskey" id="2N6-AC-2hU"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="WCq-Xd-JnI" id="Mkj-uX-Jc1"/>
                         <outlet property="beerPercentTextField" destination="YJK-VU-mB7" id="fm9-Zz-vbR"/>
@@ -198,25 +172,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3S-SZ-XgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="598"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oNt-01-0m5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSa-gk-IfP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrP-Dj-GjK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4Ih-IO-Bqi" kind="relationship" relationship="rootViewController" id="HZG-OM-ZJl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xAo-X3-qL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-54" y="255"/>
+            <point key="canvasLocation" x="-148" y="-158"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="whiskey" width="25" height="25"/>
+        <image name="wine" width="25" height="25"/>
+    </resources>
 </document>
