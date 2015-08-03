@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hbh-0s-zjf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rSa-gk-IfP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="aPM-nZ-dWH">
+            <objects>
+                <viewController id="4Ih-IO-Bqi" customClass="MainMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zz9-NG-iix"/>
+                        <viewControllerLayoutGuide type="bottom" id="yja-9e-AS9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbH-Yn-jVH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz6-KF-yDd">
+                                <rect key="frame" x="247" y="104" width="105" height="73"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
+                                <state key="normal" title="Wine">
+                                    <color key="titleColor" red="0.44705882352941173" green="0.18431372549019609" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yND-6a-Bfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-aZ-sor">
+                                <rect key="frame" x="220" y="197" width="159" height="76"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                                <state key="normal" title="Whiskey">
+                                    <color key="titleColor" red="0.70196078431372544" green="0.40784313725490196" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hbh-0s-zjf" kind="show" id="5NT-gq-gHe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jz6-KF-yDd" secondAttribute="centerX" id="82p-fh-Ilc"/>
+                            <constraint firstItem="Sef-aZ-sor" firstAttribute="top" secondItem="jz6-KF-yDd" secondAttribute="bottom" constant="20" id="CEZ-vP-wNv"/>
+                            <constraint firstItem="jz6-KF-yDd" firstAttribute="top" secondItem="Zz9-NG-iix" secondAttribute="bottom" constant="40" id="T8G-UR-Yzd"/>
+                            <constraint firstItem="Sef-aZ-sor" firstAttribute="centerX" secondItem="jz6-KF-yDd" secondAttribute="centerX" constant="0.5" id="p8a-ld-aPh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aVv-x4-ssh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SrL-Mi-GPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="255"/>
+        </scene>
         <!--Wine View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -81,7 +128,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="28" y="235"/>
+            <point key="canvasLocation" x="1392" y="-88"/>
         </scene>
         <!--Whiskey View Controller-->
         <scene sceneID="Cso-Dt-m1D">
@@ -151,7 +198,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3S-SZ-XgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="712" y="235"/>
+            <point key="canvasLocation" x="1392" y="598"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oNt-01-0m5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSa-gk-IfP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrP-Dj-GjK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Ih-IO-Bqi" kind="relationship" relationship="rootViewController" id="HZG-OM-ZJl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAo-X3-qL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="255"/>
         </scene>
     </scenes>
 </document>
