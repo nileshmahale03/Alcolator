@@ -20,6 +20,27 @@
     self.navigationItem.title = @"Whiskey";
 }
 
+- (IBAction)sliderValueDidChange:(UISlider *)sender {
+    NSLog(@"Slider Value changed to %f", sender.value);
+    [self.beerPercentTextField resignFirstResponder];
+    
+    int numberOfBeers = self.beerCountSlider.value;
+    int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles
+    
+    float alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100;
+    float ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
+    float ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
+    
+    float ouncesInOneWhiskeyGlass = 1;  // a 1oz shot
+    float alcoholPercentageOfWhiskey = 0.4;  // 40% is average
+    
+    float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
+    float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
+    
+    int sliderValue = ceilf(numberOfWhiskeyGlassesForEquivalentAlcoholAmount); //round up
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", sliderValue]]; // display badge value
+}
+
 - (void)buttonPressed:(UIButton *)sender;
 {
     [self.beerPercentTextField resignFirstResponder];
